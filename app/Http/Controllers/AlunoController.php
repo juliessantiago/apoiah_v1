@@ -24,8 +24,9 @@ class AlunoController extends Controller
     }
 
     public function show($id){
-        $alunos = Aluno::find($id);
-        return $alunos;
+        // $alunos = Aluno::find($id);
+        // return $alunos;
+        return view('aluno', ['aluno' => Aluno::find($id)]);
     }
 
     public function create(){
@@ -33,7 +34,7 @@ class AlunoController extends Controller
     }
 
     public function store(Request $request){
-        \Log::info('entrou na funcao de criacao');
+        //\Log::info('entrou na funcao de criacao');
         $aluninho = new Aluno();
         $array_input_request = $request->all();
         $aluninho->fill($array_input_request);
