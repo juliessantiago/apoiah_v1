@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\AlunoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\ProdutoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/olá', [HomeController::class, 'index']); 
+Route::get('/alunos', [AlunoController::class, 'index']); 
+Route::get('/aluno/{id}', [AlunoController::class, 'show']);
+Route::get('/aluno', [AlunoController::class, 'create']); //exibição de formulário
+Route::post('/aluno', [AlunoController::class, 'store']);
 

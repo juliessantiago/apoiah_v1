@@ -8,4 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Aluno extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "num_protoc",
+        "nome", 
+        "sobrenome",
+        "cpf",
+        "matricula",
+        "idade", 
+        "turma",
+        "vulner_social",
+        "data_nasc",
+        "turno", 
+        "motivo_enc", 
+        "responsavel"
+    ];
 }

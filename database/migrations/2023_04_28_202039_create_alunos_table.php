@@ -14,6 +14,18 @@ return new class extends Migration
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text('num_protoc');
+            $table->text('nome');
+            $table->text('sobrenome');
+            $table->text('cpf');
+            $table->text('matricula');
+            $table->integer('idade');
+            $table->text('turma');
+            $table->boolean('vulner_social')->default(false);
+            $table->text('data_nasc');
+            $table->enum('turno', ['manha', 'tarde', 'noite']);
+            $table->text('motivo_enc');
+            $table->text('responsavel');
         });
     }
 
