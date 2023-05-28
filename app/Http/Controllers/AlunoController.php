@@ -60,4 +60,16 @@ class AlunoController extends Controller
             dump("Erro, não foi possível atualizar");
         }
     }
+    public function delete($id){ //exibe página para confirmar exclusão
+        return view('aluno_delete_confirm', ['aluno' => Aluno::find($id)]);
+    }
+
+    public function destroy(Request $request, $id){ //chamar de remove? 
+       if(Aluno::destroy($id)){
+            dump('Aluno deletado do sistema');
+            return redirect('/alunos');
+       }else{
+        dump('houve problema ao excluir o aluno');
+       }
+    }
 }

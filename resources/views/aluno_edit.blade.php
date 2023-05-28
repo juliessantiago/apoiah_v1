@@ -65,7 +65,9 @@
 
         <label for="motivo_enc">Motivo do encaminhamento</label>
         <div class="form-group">
-            <textarea class="p-4 col-12" type="text" name="motivo_enc" value="{{$aluno->motivo_enc}}"></textarea>
+            <textarea class="p-4 col-12" type="text" name="motivo_enc">
+            {{$aluno->motivo_enc}}
+            </textarea>
         </div>
 
         <label>Vulnerabilidade Social</label>
@@ -82,7 +84,7 @@
             </label>
           </div>
           
-        <button type="submit" class="btn btn-primary m-4 px-4" value="Criar/">Editar</button>
+        <button type="submit" class="btn btn-secondary m-4 px-4" value="Editar/">Editar</button>
     </form>
 
     </body>

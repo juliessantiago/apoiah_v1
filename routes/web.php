@@ -20,8 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/alunos', [AlunoController::class, 'index'])->name('index');
+
 Route::get('/aluno/{id}', [AlunoController::class, 'show'])->name('show');
 Route::get('/aluno', [AlunoController::class, 'create'])->name('create');
+
 Route::get('/aluno/{id}/edit', [AlunoController::class, 'edit'])->name('edit');
 Route::post('/aluno/{id}/update', [AlunoController::class, 'update'])->name('update');
 
+Route::get('/aluno/{id}/delete', [AlunoController::class, 'delete'])->name('delete');
+Route::post('/aluno/{id}/destroy', [AlunoController::class, 'destroy'])->name('destroy');
