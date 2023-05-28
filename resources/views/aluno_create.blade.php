@@ -7,94 +7,83 @@
         <title>Inserindo novo aluno</title>
     </head>
     <body class="antialiased">
-    <table class="table col-4"><!--esta retornando código 419-->
-        <form action="/aluno" method="POST" class="m-4">
-            
-            <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-            
-                    <label class="p-4">Nome:</label>
-                    <input type="text" name="nome"/>
-            <tr>
-                <td>
-                    <label>Sobrenome:</label>
-                    <input type="text" name="sobrenome"/>
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <label>Nº Protocolo:</label>
-                    <input type="text" name="num_protoc"/>
-                </td>
-            </tr>
+        <h3 class="text-center text-secondary p-3">Novo Aluno</h3>
+    <form action="/aluno" method="POST" class="col-md-6 offset-md-3">
+        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
 
-            <tr>
-                <td>
-                    <label>CPF:</label>
-                    <input type="text" name="cpf"/>
-                </td>
-            </tr>
-            
-           <tr>
-                <td>
-                    <label>Matrícula:</label>
-                    <input type="text" name="matricula"/>
-                </td>
-           </tr>
+        <div class="form-group">
+            <label for="nome">Nome do aluno</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome">
+        </div>
 
-           <tr>
-            <td>
-                <label>Idade:</label>
-                <input type="text" name="idade"/>
-            </td>
-           </tr>
-            
-           <tr>
-                <td>
-                    <label>Turma:</label>
-                    <input type="text" name="turma"/>
-                </td>
-           </tr>
+        <div class="form-group">
+            <label for="sobrenome">Sobrenome do aluno</label>
+            <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome">
+        </div>
 
-        <tr>
-            <td>
-                <label>Data de Nascimento</label>
-                <input type="text" name="data_nasc"/>
-            </td>
-        </tr>
+        <div class="form-group">
+            <label for="num_protoc">Nº protocolo</label>
+            <input type="text" class="form-control" id="num_protoc" name="num_protoc">
+        </div>
 
-        <tr>
-            <td>
-                <label>Nome do Responsável</label>
-                <input type="text" name="responsavel"/>
-            </td>
-        </tr>
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf">
+        </div>
 
-        <tr>
-            <td>
-                <label>Motivo encaminhamento</label>
-                <textarea type="text" name="motivo_enc"> </textarea>
-            </td>
-        </tr>
-            
-           <tr>
-            <label>Vunerabilidade Econômica/Social</label>
-            <td>
-                <input type="radio" name="vulner_social" value="1">
-                <label for="html">Sim</label><br>
-              <input type="radio" name="vulner_social" value="0">
-                <label for="css">Não</label><br>
-            </td>
-           </tr>
-    
-            <tr>
-                <td>
-                    <button type="button" class=""><input type="submit" value="Criar"/></button>
-                </td>
-            </tr>
-            
-          </form>
-    </table>
-      
+        <div class="form-group">
+            <label for="matricula">Nº Matrícula</label>
+            <input type="text" class="form-control" id="matricula" name="matricula">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="number" class="form-control" id="idade" name="idade">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Turma</label>
+            <input type="text" class="form-control" id="turma" name="turma">
+        </div>
+
+        <label for="idade">Turno</label>
+        <select class="form-select" aria-label="Default select example" name="turno">
+            <option selected value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+          </select>
+
+        <div class="form-group">
+            <label for="idade">Data de nascimento</label>
+            <input type="date" class="form-control" id="data_nasc" name="data_nasc">
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Nome do Responsável</label>
+            <input type="text" class="form-control" id="responsavel" name="responsavel">
+        </div>
+
+        <label for="motivo_enc">Motivo do encaminhamento</label>
+        <div class="form-group">
+            <textarea class="p-4 col-12" type="text" name="motivo_enc"></textarea>
+        </div>
+
+        <label>Vulnerabilidade Social</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="vulner_social" id="vulner_social" value="0" checked>
+            <label class="form-check-label" for="vulner_social">
+              Não
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="vulner_social" id="vulner_social" value="1">
+            <label class="form-check-label" for="vulner_social">
+              Sim
+            </label>
+          </div>
+          
+        <button type="submit" class="btn btn-primary m-4 px-4" value="Criar/">Criar</button>
+    </form>
+
     </body>
 </html>

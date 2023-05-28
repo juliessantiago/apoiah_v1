@@ -23,4 +23,5 @@ Route::get('/alunos', [AlunoController::class, 'index']);
 Route::get('/aluno/{id}', [AlunoController::class, 'show']);
 Route::get('/aluno', [AlunoController::class, 'create']); //exibição de formulário
 Route::post('/aluno', [AlunoController::class, 'store']);
+Route::post('/aluno/{id}/update', [AlunoController::class, 'update']);
 
