@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/alunos', [AlunoController::class, 'index']); 
-Route::get('/aluno/{id}', [AlunoController::class, 'show']);
-Route::get('/aluno', [AlunoController::class, 'create']); //exibição de formulário
-Route::post('/aluno', [AlunoController::class, 'store']);
-Route::post('/aluno/{id}/update', [AlunoController::class, 'update']);
+Route::get('/alunos', [AlunoController::class, 'index'])->name('index');
+Route::get('/aluno/{id}', [AlunoController::class, 'show'])->name('show');
+Route::get('/aluno', [AlunoController::class, 'create'])->name('create');
+Route::get('/aluno/{id}/edit', [AlunoController::class, 'edit'])->name('edit');
+Route::post('/aluno/{id}/update', [AlunoController::class, 'update'])->name('update');
 

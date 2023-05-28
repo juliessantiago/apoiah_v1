@@ -47,7 +47,17 @@ class AlunoController extends Controller
         }
     }
 
-    public function update(Request $request, $id){
+    public function edit($id){
+        return view('aluno_edit', ['aluno' => Aluno::find($id)]);
+    }
 
+    public function update(Request $request, $id){
+        $aluno = $request->all(); //por que all()
+        if(Aluno::find($id)->update($aluno)){
+            dump("Dados atualizados com sucesso");
+            return redirect('/alunos');
+        }else{
+            dump("Erro, não foi possível atualizar");
+        }
     }
 }
