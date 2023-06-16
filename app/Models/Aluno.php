@@ -11,7 +11,6 @@ class Aluno extends Model
     protected $fillable = [
         "num_protoc",
         "nome", 
-        "sobrenome",
         "cpf",
         "matricula",
         "idade", 

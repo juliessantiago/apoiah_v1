@@ -15,12 +15,7 @@
             <label for="nome">Nome do aluno</label>
             <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome">
         </div>
-
-        <div class="form-group">
-            <label for="sobrenome">Sobrenome do aluno</label>
-            <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome">
-        </div>
-
+        
         <div class="form-group">
             <label for="num_protoc">Nº protocolo</label>
             <input type="text" class="form-control" id="num_protoc" name="num_protoc">

@@ -16,7 +16,6 @@ return new class extends Migration
             $table->timestamps();
             $table->text('num_protoc');
             $table->text('nome');
-            $table->text('sobrenome');
             $table->text('cpf');
             $table->text('matricula');
             $table->integer('idade');

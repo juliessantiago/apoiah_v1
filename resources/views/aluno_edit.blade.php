@@ -16,10 +16,6 @@
             <input type="text" class="form-control text-muted" placeholder="Nome" value="{{$aluno->nome}}">
         </div>
 
-        <div class="form-group">
-            <label for="sobrenome">Sobrenome do aluno</label>
-            <input type="text" class="form-control text-muted"  placeholder="Sobrenome" name="sobrenome" value="{{$aluno->sobrenome}}">
-        </div>
 
         <div class="form-group">
             <label for="num_protoc">Nº protocolo</label>

@@ -12,7 +12,7 @@
     @if ($aluno)
 
     <h2 class="text-secondary text-center">Aluno selecionado: </h2>
-        <h3 class="text-secondary">{{ $aluno->nome }} {{ $aluno->sobrenome }}</h3>
+        <h3 class="text-secondary">{{ $aluno->nome }}</h3>
         <ul>
             <li>Nº de protocolo: {{ $aluno->num_protoc}} </li>
             <li>CPF: {{ $aluno->cpf }}</li>
