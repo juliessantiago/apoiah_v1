@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AlunoController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrientadorController;
 
 /*
 |--------------------------------------------------------------------------
