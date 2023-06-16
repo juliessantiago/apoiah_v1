@@ -3,7 +3,7 @@
 use App\Http\Controllers\AlunoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProdutoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +29,6 @@ Route::post('/aluno/{id}/update', [AlunoController::class, 'update'])->name('upd
 
 Route::get('/aluno/{id}/delete', [AlunoController::class, 'delete'])->name('delete');
 Route::post('/aluno/{id}/destroy', [AlunoController::class, 'destroy'])->name('destroy');
+
+
+Route::get('/orientadores', [OrientadorController::class, 'index'])->name('index');
