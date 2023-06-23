@@ -19,6 +19,11 @@ class Aluno extends Model
         "data_nasc",
         "turno", 
         "motivo_enc", 
-        "responsavel"
+        "responsavel", 
+        "orientador_id",
     ];
+
+    public function orientador(){
+        return $this->belongsTo(Orientador::class);
+    }
 }

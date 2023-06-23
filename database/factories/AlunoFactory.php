@@ -17,17 +17,18 @@ class AlunoFactory extends Factory
     public function definition(): array
     {
         return [
-            'num_protoc' =>$this->faker->numerify(),
-            'nome'=>$this->faker->name, 
-            'cpf'=>$this->faker->numerify('###########'), //alterar depois para formato válido de cpf 
-            'matricula'=>$this->faker->bothify(),
-            'idade'=>$this->faker->numberBetween(7,20),//idade depois será calculada de acordo com data_nasc
-            'turma'=>$this->faker->randomElement(['5a', '5b', '6a', '6b', '7a','7b', '8a', '8b', '9a', '9b']),
-            'vulner_social'=>$this->faker->randomElement(['0', '1']),
-            'data_nasc'=>$this->faker->date('Y_m_d'),
-            'turno'=>$this->faker->randomElement(['manha', 'tarde', 'noite']),
-            'motivo_enc'=>$this->faker->paragraphs(),
-            'responsavel'=>$this->faker->name, 
+                 'num_protoc' =>$this->faker->numerify(),
+                'nome'=> $this->faker->name(), 
+                'cpf'=>$this->faker->numerify(), //alterar depois para formato válido de cpf 
+                'matricula'=>$this->faker->numerify(),
+                'idade'=>$this->faker->numberBetween(7,20),
+                'turma'=>$this->faker->boolean(),
+                'vulner_social'=>$this->faker->boolean(),
+                'data_nasc'=>$this->faker->date('Y_m_d'),
+                'turno'=>$this->faker->randomElements('manha', 'tarde', 'noite'),
+                'motivo_enc'=>$this->faker->paragraphs()[0],
+                'responsavel'=>$this->faker->name(), 
+                'orientador_id'=>$this->faker->numberBetween(1, 5),
         ];
     }
 }

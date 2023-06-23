@@ -18,7 +18,7 @@ use App\Http\Controllers\OrientadorController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//-----------------------------Aluno------------------------------------//
 Route::get('/alunos', [AlunoController::class, 'index'])->name('index');
 
 Route::get('/aluno/{id}', [AlunoController::class, 'show'])->name('show');
@@ -30,5 +30,9 @@ Route::post('/aluno/{id}/update', [AlunoController::class, 'update'])->name('upd
 Route::get('/aluno/{id}/delete', [AlunoController::class, 'delete'])->name('delete');
 Route::post('/aluno/{id}/destroy', [AlunoController::class, 'destroy'])->name('destroy');
 
-
+//-----------------------------Orientador-------------------------------------//
 Route::get('/orientadores', [OrientadorController::class, 'index'])->name('index');
+
+Route::get('/orientador/{id}', [OrientadorController::class, 'show'])->name('show');
+
+// Route::get('/orientador', [OrientadorController::class, 'create'])->name('create');

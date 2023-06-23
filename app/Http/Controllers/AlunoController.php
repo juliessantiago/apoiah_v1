@@ -34,7 +34,7 @@ class AlunoController extends Controller
     }
 
     public function store(Request $request){
-        //\Log::info('entrou na funcao de criacao');
+        \Log::info('entrou na funcao de criacao');
         $aluninho = new Aluno();
         $array_input_request = $request->all();
         $aluninho->fill($array_input_request);
