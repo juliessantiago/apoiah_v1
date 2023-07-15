@@ -9,8 +9,8 @@
       
     </head>
     <body class="antialiased bg-primary">
-       <div class="bg-primary">
-            <h1 class="text-white text-center mx-auto">Apoiah</h1>
+       <div class="bg-primary justify-content-center align-items-center">
+            <h1 class="text-white text-center d-block ">Apoiah</h1>
        </div>
     </body>
 </html>
