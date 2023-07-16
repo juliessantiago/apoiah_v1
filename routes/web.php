@@ -3,7 +3,7 @@
 use App\Http\Controllers\AlunoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrientadorController;
-
+use App\Http\Controllers\PsicologoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
