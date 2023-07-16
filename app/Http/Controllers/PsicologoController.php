@@ -19,4 +19,24 @@ class PsicologoController extends Controller
     public function show($id){
         return view('psicologo', ['psicologo' => Psicologo::find($id)]);
     }
+
+    public function create(){
+        return view('psicologo_create');
+    }
+
+    public function store(Request $request){
+        //\Log::info('entrou na funcao de criacao');
+        $psicologo = new Psicologo();
+        $array_input_request = $request->all();
+        $psicologo->fill($array_input_request);
+        $psicologo->save();
+        
+        if($psicologo->save()){
+            // dump('novo aluno criado');
+            return view('psicologos', ['psicologos'=>$this->psicologo->all()]);
+        }else{
+            dump('não foi possível salvar');
+        }
+    }
+
 }

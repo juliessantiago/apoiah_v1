@@ -53,4 +53,5 @@ Route::get('/psicologos', [PsicologoController::class, 'index'])->name('index');
 
 Route::get('/psicologo/{id}', [PsicologoController::class, 'show'])->name('show');
 
-
+Route::get('/psicologo', [PsicologoController::class, 'create'])->name('create');
+Route::post('/psicologo', [PsicologoController::class, 'store'])->name('store');
