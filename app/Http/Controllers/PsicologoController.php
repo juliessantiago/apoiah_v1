@@ -11,5 +11,12 @@ class PsicologoController extends Controller
         $this->psicologo = new Psicologo();
     }
     
+    
+    public function index(){
+        return view('psicologos', ['psicologos'=>$this->psicologo->all()]);
+    }
 
+    public function show($id){
+        return view('psicologo', ['psicologo' => Psicologo::find($id)]);
+    }
 }
