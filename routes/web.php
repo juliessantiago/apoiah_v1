@@ -55,3 +55,6 @@ Route::get('/psicologo/{id}', [PsicologoController::class, 'show'])->name('show'
 
 Route::get('/psicologo', [PsicologoController::class, 'create'])->name('create');
 Route::post('/psicologo', [PsicologoController::class, 'store'])->name('store');
+
+Route::get('/psicologo/{id}/edit_psicologo', [PsicologoController::class, 'edit'])->name('edit_psicologo');
+Route::post('/psicologo/{id}/update_psicologo', [PsicologoController::class, 'update'])->name('update_psicologo');

@@ -38,5 +38,19 @@ class PsicologoController extends Controller
             dump('não foi possível salvar');
         }
     }
+    //Atenção: há um bug de reenvio de dados no store 
+    public function edit($id){
+        return view('psicologo_edit', ['psicologo' => Psicologo::find($id)]);
+    }
 
+    public function update(Request $request, $id){
+        // \Log::info($id);
+        $psicologo = $request->all(); //por que all()
+        if(Psicologo::find($id)->update($psicologo)){
+            dump("Dados atualizados com sucesso");
+            return redirect('/psicologos');
+        }else{
+            dump("Erro, não foi possível atualizar");
+        }
+    }
 }
