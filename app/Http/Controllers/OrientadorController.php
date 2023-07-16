@@ -37,11 +37,11 @@ class OrientadorController extends Controller
     }
 
     public function edit($id){
-        return view('orientador_edit', ['aluno' => Orientador::find($id)]);
+        return view('orientador_edit', ['orientador' => Orientador::find($id)]);
     }
 
     public function update(Request $request, $id){
-        $orientador = $request->all(); //por que all()
+        $orientador = $request->all(); 
         if(Orientador::find($id)->update($orientador)){
             dump("Dados do orientador atualizados com sucesso");
             return redirect('/orientadores');
@@ -50,8 +50,17 @@ class OrientadorController extends Controller
         }
     }
     public function delete($id){ //exibe página para confirmar exclusão
-        return view('aluno_delete_confirm', ['aluno' => Orientador::find($id)]);
+        return view('orientador_delete_confirm', ['orientador' => Orientador::find($id)]);
     }
+
+    public function destroy(Request $request, $id){ 
+        if(Orientador::destroy($id)){
+             dump('Orientador deletado do sistema');
+             return redirect('/orientadores');
+        }else{
+         dump('houve problema ao excluir o orientador');
+        }
+     }
 
 
 }

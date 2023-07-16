@@ -15,6 +15,7 @@
     <div class="m-5">
         <h3 class="text-secondary">{{ $aluno->nome }}</h3>
         <ul>
+            <!-- <li>Orientador Responsável: {{$aluno->orientador_id}}</li> -->
             <li>Nº de protocolo: {{ $aluno->num_protoc}} </li>
             <li>CPF: {{ $aluno->cpf }}</li>
             <li>Nº Matrícula: {{ $aluno->matricula }}</li>
@@ -25,8 +26,8 @@
             <li>Vulnerabilidade Social/Econômica: {{ $aluno->vulner_social? 'Sim' : 'Não' }}</li>
             <li><p class="w-50 text-justify">Motivo de encaminhamento: {{ $aluno->motivo_enc}}</p></li>
 
-            <button class="btn btn-secondary"><a href="{{route('edit', $aluno->id)}}" title="Editar" class="text-decoration-none text-white">Editar aluno</a></button>
-            <button class="btn btn-danger"><a href="{{route('delete', $aluno->id)}}" title="Excluir" class="text-decoration-none text-white">Excluir aluno</a></button>
+            <button class="btn btn-secondary"><a href="{{route('edit_aluno', $aluno->id)}}" title="Editar" class="text-decoration-none text-white">Editar aluno</a></button>
+            <button class="btn btn-danger"><a href="{{route('delete_aluno', $aluno->id)}}" title="Excluir" class="text-decoration-none text-white">Excluir aluno</a></button>
         </ul>
     </div>
        

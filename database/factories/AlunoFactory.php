@@ -28,7 +28,6 @@ class AlunoFactory extends Factory
                 'turno'=>'tarde',
                 'motivo_enc'=>$this->faker->paragraphs()[0],
                 'responsavel'=>$this->faker->name(), 
-                'orientador_id'=>$this->faker->numberBetween(1, 5),
         ];
         //alterar valores de turno para enum e vulner_social para boolean
         //tomar cuidado com o retorno! 

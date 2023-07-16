@@ -1,13 +1,16 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\Orientador;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
 
 class AlunoController extends Controller
 {
     private $aluno;
+    private $orientador; 
     public function __construct(){
         $this->aluno = new Aluno(); //criando nova instância de Aluno
+        $this->orientador = new Orientador(); //criando nova instância de Aluno
     }
     public function index(){
         //retorna uma resposta http em formato json 
@@ -34,14 +37,15 @@ class AlunoController extends Controller
     }
 
     public function store(Request $request){
-        \Log::info('entrou na funcao de criacao');
+        //\Log::info('entrou na funcao de criacao');
         $aluninho = new Aluno();
         $array_input_request = $request->all();
         $aluninho->fill($array_input_request);
         $aluninho->save();
         
         if($aluninho->save()){
-            dump('novo aluno criado');
+            // dump('novo aluno criado');
+            return view('alunos', ['aluninhos'=>$this->aluno->all()]);
         }else{
             dump('não foi possível salvar');
         }
@@ -52,8 +56,9 @@ class AlunoController extends Controller
     }
 
     public function update(Request $request, $id){
+        // \Log::info($id);
         $aluno = $request->all(); //por que all()
-        if(Aluno::find($id)->update($aluno)){
+        if(Aluno::find($id)->save($aluno)){
             dump("Dados atualizados com sucesso");
             return redirect('/alunos');
         }else{
@@ -64,7 +69,7 @@ class AlunoController extends Controller
         return view('aluno_delete_confirm', ['aluno' => Aluno::find($id)]);
     }
 
-    public function destroy(Request $request, $id){ //chamar de remove? 
+    public function destroy(Request $request, $id){ 
        if(Aluno::destroy($id)){
             dump('Aluno deletado do sistema');
             return redirect('/alunos');

@@ -20,10 +20,5 @@ class Aluno extends Model
         "turno", 
         "motivo_enc", 
         "responsavel", 
-        "orientador_id",
     ];
-
-    public function orientador(){
-        return $this->belongsTo(Orientador::class);
-    }
 }
