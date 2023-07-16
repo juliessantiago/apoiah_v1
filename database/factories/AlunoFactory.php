@@ -22,7 +22,7 @@ class AlunoFactory extends Factory
                 'cpf'=>$this->faker->numerify(), //alterar depois para formato válido de cpf 
                 'matricula'=>$this->faker->numerify(),
                 'idade'=>$this->faker->numberBetween(7,20),
-                'turma'=>$this->faker->boolean(),
+                'turma'=>'7A',
                 'vulner_social'=>true,
                 'data_nasc'=>$this->faker->date('Y_m_d'),
                 'turno'=>'tarde',
@@ -30,6 +30,6 @@ class AlunoFactory extends Factory
                 'responsavel'=>$this->faker->name(), 
         ];
         //alterar valores de turno para enum e vulner_social para boolean
-        //tomar cuidado com o retorno! 
+        //tomar cuidado com o retorno do faker!
     }
 }

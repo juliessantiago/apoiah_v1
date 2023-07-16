@@ -46,3 +46,7 @@ Route::post('/orientador/{id}/update_orientador', [OrientadorController::class, 
 
 Route::get('/orientador/{id}/delete_orientador', [OrientadorController::class, 'delete'])->name('delete_orientador');
 Route::post('/orientador/{id}/destroy_orientador', [OrientadorController::class, 'destroy'])->name('destroy_orientador');
+
+
+//-----------------------------Psicólogo-------------------------------------//
+Route::get('/psicologos', [PsicologoController::class, 'index'])->name('index');

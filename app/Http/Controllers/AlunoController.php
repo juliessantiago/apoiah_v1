@@ -58,7 +58,7 @@ class AlunoController extends Controller
     public function update(Request $request, $id){
         // \Log::info($id);
         $aluno = $request->all(); //por que all()
-        if(Aluno::find($id)->save($aluno)){
+        if(Aluno::find($id)->update($aluno)){
             dump("Dados atualizados com sucesso");
             return redirect('/alunos');
         }else{
