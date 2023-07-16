@@ -8,7 +8,7 @@
     </head>
     <body class="antialiased">
         <h3 class="text-center text-secondary p-3">Editar dados</h3>
-    <form action="{{route('update', $orientador->id)}}" method="POST" class="col-md-6 offset-md-3">
+    <form action="{{route('update_orientador', $orientador->id)}}" method="POST" class="col-md-6 offset-md-3">
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
 
         <div class="form-group">

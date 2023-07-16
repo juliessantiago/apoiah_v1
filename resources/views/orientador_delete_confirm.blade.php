@@ -11,7 +11,7 @@
 <body class="p-4 m-4">
     @if ($orientador)
     
-    <form action="{{route('destroy', $orientador->id)}}" method="POST" class="col-md-6 offset-md-3">
+    <form action="{{route('destroy_orientador', $orientador->id)}}" method="POST" class="col-md-6 offset-md-3">
     <p>Você tem certeza de que deseja excluir: </p>
     <h3 class="text-secondary">Orientador nº {{$orientador->id}} - {{ $orientador->nome }}?</h3>
     <p class="text-muted">Ação não poderá ser desfeita</p>

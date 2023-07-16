@@ -31,6 +31,11 @@
             <input type="text" class="form-control" id="email" name="email">
         </div>
 
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="text" class="form-control" id="senha" name="senha">
+        </div>
+
         <button type="submit" class="btn btn-primary m-4 px-4" value="Criar/">Criar</button>
     </form>
 

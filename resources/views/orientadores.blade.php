@@ -22,8 +22,8 @@
             <li>Email: {{ $orientador->email }}</li>
 
             <!-- <h4>Esse orientador é responsável por:</h4> -->
-            <button class="btn btn-secondary"><a href="{{route('edit', $orientador->id)}}" title="Editar" class="text-decoration-none text-white">Editar Orientador</a></button>
-            <button class="btn btn-danger"><a href="{{route('delete', $orientador->id)}}" title="Excluir" class="text-decoration-none text-white">Excluir Orientador</a></button>
+            <button class="btn btn-secondary"><a href="{{route('edit_orientador', $orientador->id)}}" title="Editar" class="text-decoration-none text-white">Editar Orientador</a></button>
+            <button class="btn btn-danger"><a href="{{route('delete_orientador', $orientador->id)}}" title="Excluir" class="text-decoration-none text-white">Excluir Orientador</a></button>
         </ul>
     </div>
        

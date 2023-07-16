@@ -37,10 +37,12 @@ Route::post('/aluno/{id}/destroy_aluno', [AlunoController::class, 'destroy'])->n
 Route::get('/orientadores', [OrientadorController::class, 'index'])->name('index');
 
 Route::get('/orientador/{id}', [OrientadorController::class, 'show'])->name('show');
+
 Route::get('/orientador', [OrientadorController::class, 'create'])->name('create');
+Route::post('/orientador', [OrientadorController::class, 'store'])->name('store');
 
-Route::get('/orientador/{id}/edit', [OrientadorController::class, 'edit'])->name('edit');
-Route::post('/orientador/{id}/update', [OrientadorController::class, 'update'])->name('update');
+Route::get('/orientador/{id}/edit_orientador', [OrientadorController::class, 'edit'])->name('edit_orientador');
+Route::post('/orientador/{id}/update_orientador', [OrientadorController::class, 'update'])->name('update_orientador');
 
-Route::get('/orientador/{id}/delete', [OrientadorController::class, 'delete'])->name('delete');
-Route::post('/orientador/{id}/destroy', [OrientadorController::class, 'destroy'])->name('destroy');
+Route::get('/orientador/{id}/delete_orientador', [OrientadorController::class, 'delete'])->name('delete_orientador');
+Route::post('/orientador/{id}/destroy_orientador', [OrientadorController::class, 'destroy'])->name('destroy_orientador');

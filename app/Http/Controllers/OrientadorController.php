@@ -18,19 +18,20 @@ class OrientadorController extends Controller
     public function show($id){
         return view('orientador', ['orientador' => Orientador::find($id)]);
     }
-    // public function store(Request $request){
-    //     \Log::info('entrou na funcao de criacao');
-    //     $orientador = new Orientador();
-    //     $array_input_request = $request->all();
-    //     $orientador->fill($array_input_request);
-    //     $orientador->save();
+    public function store(Request $request){
+        // \Log::info('entrou na funcao de criacao');
+        $orientador = new Orientador();
+        $array_input_request = $request->all();
+        $orientador->fill($array_input_request);
+        $orientador->save();
         
-    //     if($orientador->save()){
-    //         dump('novo orientador criado');
-    //     }else{
-    //         dump('não foi possível salvar');
-    //     }
-    // }
+        if($orientador->save()){
+            dump('novo orientador criado');
+            return view('orientadores', ['orientadores'=>$this->orientador->all()]);
+        }else{
+            dump('não foi possível salvar');
+        }
+    }
 
     public function index(){
         return view('orientadores', ['orientadores'=>$this->orientador->all()]);
