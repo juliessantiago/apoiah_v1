@@ -50,3 +50,7 @@ Route::post('/orientador/{id}/destroy_orientador', [OrientadorController::class,
 
 //-----------------------------Psicólogo-------------------------------------//
 Route::get('/psicologos', [PsicologoController::class, 'index'])->name('index');
+
+Route::get('/psicologo/{id}', [PsicologoController::class, 'show'])->name('show');
+
+
