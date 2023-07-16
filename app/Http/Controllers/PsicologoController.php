@@ -53,4 +53,17 @@ class PsicologoController extends Controller
             dump("Erro, não foi possível atualizar");
         }
     }
+
+    public function delete($id){ //exibe página para confirmar exclusão
+        return view('psicologo_delete_confirm', ['psicologo' => Psicologo::find($id)]);
+    }
+
+    public function destroy(Request $request, $id){ 
+       if(Psicologo::destroy($id)){
+            dump('Psicologo deletado do sistema');
+            return redirect('/psicologos');
+       }else{
+        dump('houve problema ao excluir o psicologos');
+       }
+    }
 }

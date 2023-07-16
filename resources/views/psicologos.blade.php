@@ -21,7 +21,7 @@
 
             <div class="mt-4">
                 <button class="btn btn-secondary"><a href="{{route('edit_psicologo', $psicologo->id)}}" title="Editar" class="text-decoration-none text-white">Editar Psicologo</a></button>
-                <button class="btn btn-danger"><a href="" title="Excluir" class="text-decoration-none text-white">Excluir Psicologo</a></button>
+                <button class="btn btn-danger"><a href="{{route('delete_psicologo', $psicologo->id)}}" title="Excluir" class="text-decoration-none text-white">Excluir Psicologo</a></button>
             </div>
             
         </ul>

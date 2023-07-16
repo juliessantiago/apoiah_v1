@@ -58,3 +58,6 @@ Route::post('/psicologo', [PsicologoController::class, 'store'])->name('store');
 
 Route::get('/psicologo/{id}/edit_psicologo', [PsicologoController::class, 'edit'])->name('edit_psicologo');
 Route::post('/psicologo/{id}/update_psicologo', [PsicologoController::class, 'update'])->name('update_psicologo');
+
+Route::get('/psicologo/{id}/delete_psicologo', [PsicologoController::class, 'delete'])->name('delete_psicologo');
+Route::post('/psicologo/{id}/destroy_psicologo', [PsicologoController::class, 'destroy'])->name('destroy_psicologo');
