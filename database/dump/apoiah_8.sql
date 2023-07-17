@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3400
--- Tempo de geração: 17-Jul-2023 às 16:41
+-- Tempo de geração: 17-Jul-2023 às 20:25
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -208,7 +208,22 @@ INSERT INTO `psicologos` (`id`, `created_at`, `updated_at`, `nome`, `instituicao
 (2, '2023-07-17 16:55:28', '2023-07-17 16:55:28', 'Sra. Nádia Padrão Leon Neto', 'Vieira e Salazar', 'icaro.ferreira@r7.com', 'uhrr', '91939294135'),
 (3, '2023-07-17 16:55:28', '2023-07-17 16:55:28', 'Srta. Elisa Analu Amaral Sobrinho', 'Ramires e Dias e Filhos', 'carla39@rangel.com', 'eqei', '86019038802'),
 (4, '2023-07-17 16:55:28', '2023-07-17 16:55:28', 'Gabrielle Montenegro', 'Salas e Associados', 'joyce52@dasdores.net.br', 'tzhi', '42204950777'),
-(5, '2023-07-17 16:55:28', '2023-07-17 16:55:28', 'Dr. Daniele Stella Barros', 'Cortês-Batista', 'hfidalgo@r7.com', 'jaio', '47139059407');
+(5, '2023-07-17 16:55:28', '2023-07-17 16:55:28', 'Dr. Daniele Stella Barros', 'Cortês-Batista', 'hfidalgo@r7.com', 'jaio', '47139059407'),
+(7, '2023-07-17 20:48:20', '2023-07-17 20:48:20', 'Sr. Kevin Maldonado', 'Saraiva Comercial Ltda.', 'burgos.alessandra@gmail.com', 'hgnt', '18349950350'),
+(8, '2023-07-17 20:48:20', '2023-07-17 20:48:20', 'Leandro Paz Neto', 'Teles Comercial Ltda.', 'simone.marinho@ig.com.br', 'recq', '61575748413'),
+(9, '2023-07-17 20:48:20', '2023-07-17 20:48:20', 'Dr. Thiago Godói Sobrinho', 'Aragão Comercial Ltda.', 'rosana.salazar@defreitas.net.br', 'yebi', '72219521521'),
+(10, '2023-07-17 20:48:21', '2023-07-17 20:48:21', 'Juan Jefferson Cordeiro', 'Pedrosa S.A.', 'darosa.eva@deaguiar.com.br', 'ddem', '22722735500'),
+(11, '2023-07-17 20:48:21', '2023-07-17 20:48:21', 'Dr. Raphael Barreto Filho', 'Zamana e Valentin e Filhos', 'juan85@uol.com.br', 'rvwl', '68083142332'),
+(12, '2023-07-17 21:02:49', '2023-07-17 21:02:49', 'Dr. Luan Cristóvão Ortiz', 'Amaral e Soto', 'rdarosa@uol.com.br', 'yysm', '92782891554'),
+(13, '2023-07-17 21:02:49', '2023-07-17 21:02:49', 'Dr. Laiane Pontes Salas Jr.', 'Ortiz e Flores', 'alonso.leal@ferraz.com.br', 'adca', '77153779371'),
+(14, '2023-07-17 21:02:49', '2023-07-17 21:02:49', 'Srta. Diana Rosa', 'Ortega e Leal', 'fgusmao@ig.com.br', 'nufu', '53841154544'),
+(15, '2023-07-17 21:02:49', '2023-07-17 21:02:49', 'Sr. Rafael Cordeiro Filho', 'Solano e Azevedo', 'qcordeiro@gmail.com', 'fzhc', '47734707154'),
+(16, '2023-07-17 21:02:50', '2023-07-17 21:02:50', 'Dr. Máximo Wagner Assunção Neto', 'Valentin e Queirós e Filhos', 'fabricio.pena@terra.com.br', 'pwob', '54428584570'),
+(17, '2023-07-17 21:03:20', '2023-07-17 21:03:20', 'Bernardo Chaves Paes Jr.', 'Rezende e Sales e Associados', 'paula85@salas.com.br', 'crup', '71639883510'),
+(18, '2023-07-17 21:03:20', '2023-07-17 21:03:20', 'Anderson Bezerra Galvão Jr.', 'de Freitas e Corona', 'mascarenhas.constancia@yahoo.com', 'kjnd', '27798102522'),
+(19, '2023-07-17 21:03:20', '2023-07-17 21:03:20', 'Dr. Márcio Santana Filho', 'Torres Ltda.', 'ulira@escobar.net', 'jyfy', '29609236741'),
+(20, '2023-07-17 21:03:20', '2023-07-17 21:03:20', 'Sra. Emilly Yohanna Fonseca Neto', 'das Dores-Pacheco', 'priscila00@yahoo.com', 'zxnp', '92930842071'),
+(21, '2023-07-17 21:03:20', '2023-07-17 21:03:20', 'Enzo Márcio Batista', 'Chaves e Maldonado Ltda.', 'moises.medina@hotmail.com', 'lgcy', '19046907329');
 
 -- --------------------------------------------------------
 
@@ -300,7 +315,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `aluno_psicologo`
@@ -324,7 +339,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de tabela `orientadors`
 --
 ALTER TABLE `orientadors`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `personal_access_tokens`
@@ -336,7 +351,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de tabela `psicologos`
 --
 ALTER TABLE `psicologos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de tabela `users`
