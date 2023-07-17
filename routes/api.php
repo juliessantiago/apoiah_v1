@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AlunoController;
 use App\Http\Controllers\Api\OrientadorController;
+use App\Http\Controllers\Api\PsicologoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,9 @@ Route::get('/orientador/{id}', [OrientadorController::class, 'show']);
 Route::post('/orientador', [OrientadorController::class, 'store']);
 Route::patch('/orientador/{id}', [OrientadorController::class, 'update']);
 Route::delete('/orientador/{id}', [OrientadorController::class, 'remove']);
+
+Route::get('/psicologo', [PsicologoController::class, 'index']);
+Route::get('/psicologo/{id}', [PsicologoController::class, 'show']);
+Route::post('/psicologo', [PsicologoController::class, 'store']);
+Route::patch('/psicologo/{id}', [PsicologoController::class, 'update']);
+Route::delete('/psicologo/{id}', [PsicologoController::class, 'remove']);
