@@ -26,4 +26,10 @@ class Aluno extends Model
       //a princípio, um aluno poderá ser cuidado por apenas um orientador
       //o orientador terá cadastro único dentro da escola (apenas um registro)
     }
+
+    public function psicologos(){
+        return $this->belongsToMany(Psicologo::class, 'aluno_psicologo', 'aluno_id', 'psicologo_id');
+      //Um psicologo poderá atender mais de um aluno 
+      //Um aluno poderá ser atendido por mais de um psicólogo
+    }
 }

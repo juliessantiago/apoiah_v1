@@ -15,5 +15,11 @@ class Psicologo extends Model
         "senha",
         "cpf"
     ];
+ 
+    public function alunos(){
+        return $this->belongsToMany(Alunos::class, 'aluno_psicologo', 'psicologo_id', 'aluno_id');
+      //Um psicologo poderá atender mais de um aluno 
+      //Um aluno poderá ser atendido por mais de um psicólogo
+    }
 
 }
