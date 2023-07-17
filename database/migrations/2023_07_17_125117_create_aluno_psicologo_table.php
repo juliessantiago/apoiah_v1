@@ -15,10 +15,8 @@ return new class extends Migration
         Schema::create('aluno_psicologo', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('aluno_id')->constrained();
-            $table->foreignId('psicologo_id')->constrained();
-            // $table->unsignedInteger('id_aluno');
-            // $table->unsignedInteger('id_psicologo');
+            $table->foreignId('aluno_id')->constrained()->onDelete('cascade');
+            $table->foreignId('psicologo_id')->constrained()->onDelete('cascade');
             $table->string('parecer');
             $table->timestamp('data_entrada')->nullable();
         });
