@@ -20,13 +20,6 @@ return new class extends Migration
             $table->string('parecer');
             $table->timestamp('data_entrada')->nullable();
         });
-
-        //alterando tabela para incluir as fk 
-
-        // Schema::table('aluno_psicologo', function (Blueprint $table){
-        //     $table->foreign('id_aluno')->references('id')->on('alunos')->onDelete('cascade');
-        //     $table->foreign('id_psicologo')->references('id')->on('psicologos')->onDelete('cascade');
-        // });
     }
 
     /**
