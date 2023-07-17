@@ -97,4 +97,20 @@ class PsicologoController extends Controller
             return response()->json($responseError, $status);
         }
     }
+
+    //retorna alunos que foram atendidos pelo psicólogo
+    public function psicologoAlunos($id){
+        try{
+            return response ()->json(Psicologo::findOrFail($id)->alunos);
+
+        }catch(\Exception $error){
+            $responseError = [
+                'Erro' => 'Psicólogo com id especificado não foi encontrado', 
+                'Exception' => $error->getMessage(),
+            ];
+            $status = 404; 
+            return response()->json($responseError, $status);
+        }
+        
+    }
 }

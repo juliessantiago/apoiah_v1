@@ -39,3 +39,5 @@ Route::get('/psicologo/{id}', [PsicologoController::class, 'show']);
 Route::post('/psicologo', [PsicologoController::class, 'store']);
 Route::patch('/psicologo/{id}', [PsicologoController::class, 'update']);
 Route::delete('/psicologo/{id}', [PsicologoController::class, 'remove']);
+
+Route::get('/psicologoAlunos/{id}', [PsicologoController::class, 'psicologoAlunos']);
