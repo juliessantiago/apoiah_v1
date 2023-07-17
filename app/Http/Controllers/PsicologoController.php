@@ -45,7 +45,7 @@ class PsicologoController extends Controller
 
     public function update(Request $request, $id){
         // \Log::info($id);
-        $psicologo = $request->all(); //por que all()
+        $psicologo = $request->all();
         if(Psicologo::find($id)->update($psicologo)){
             dump("Dados atualizados com sucesso");
             return redirect('/psicologos');

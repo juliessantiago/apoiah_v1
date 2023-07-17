@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <label for="nome">Nome do orientador</label>
-            <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" value="{{$orientador->nome}}">
+            <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" name="nome" value="{{$orientador->nome}}">
         </div>
         
         <div class="form-group">

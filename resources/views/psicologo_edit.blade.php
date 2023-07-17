@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <label for="nome">Nome do Psicólogo</label>
-            <input type="text" class="form-control text-muted" placeholder="Nome" value="{{$psicologo->nome}}">
+            <input type="text" class="form-control text-muted" placeholder="Nome"  name="nome" value="{{$psicologo->nome}}">
         </div>
 
 
