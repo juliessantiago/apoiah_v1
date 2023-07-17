@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AlunoController;
+use App\Http\Controllers\Api\OrientadorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,9 @@ Route::get('/aluno/{id}', [AlunoController::class, 'show']);
 Route::post('/aluno', [AlunoController::class, 'store']);
 Route::patch('/aluno/{id}', [AlunoController::class, 'update']);
 Route::delete('/aluno/{id}', [AlunoController::class, 'remove']);
+
+Route::get('/orientador', [OrientadorController::class, 'index']);
+Route::get('/orientador/{id}', [OrientadorController::class, 'show']);
+Route::post('/orientador', [OrientadorController::class, 'store']);
+Route::patch('/orientador/{id}', [OrientadorController::class, 'update']);
+Route::delete('/orientador/{id}', [OrientadorController::class, 'remove']);

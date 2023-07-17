@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
 
+//É possível usar o model binding também, posteriormente
+//evita ter que se buscar o id, passando diretamente a instância da model na rota 
 class AlunoController extends Controller
 {
     public function index(){
