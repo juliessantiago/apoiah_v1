@@ -21,7 +21,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $novoUsuario = $request->all();
+            $novoUsuario['password'] = password_hash($novoUsuario['password'], PASSWORD_DEFAULT);
+            $response = [
+                'mensagem' => 'Usuário cadastrado', 
+                'usuário' => User::create($novoUsuario),
+            ];
+            $status = 200; 
+        }catch(\Exception $error){
+            $response = [
+                'Erro' => $error->getMessage()
+            ];
+            $status = 500; 
+        }
+        return response()->json($response, $status);
     }
 
     /**

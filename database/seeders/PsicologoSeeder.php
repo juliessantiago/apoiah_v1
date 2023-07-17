@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Psicologo;
 use App\Models\Aluno;
+use Carbon\Carbon;
 
 class PsicologoSeeder extends Seeder
 {
@@ -16,11 +17,22 @@ class PsicologoSeeder extends Seeder
     {
         Psicologo::factory(5)->create();
 
+        $now = Carbon::now()->toDateTimeString();
+
         $alunos = Aluno::all();
         $psicologos = Psicologo::all();
-        foreach($alunos as $aluno){
-            $psicologos->first();
-            $aluno->orientadores()->attach($psicologos->id);
-        }
-    }
+        $dados = [
+            'created_at' => $now, 
+            'updated_at' => $now,
+            'parecer' =>fake()->paragraph(), 
+            'data_entrada' => $now
+        ];
+        $alunos->each( function ($aluno)
+        use($psicologos, $dados){
+            $psi = $psicologos->random()->id;
+            $aluno->psicologos()->attach([
+                $psi => $dados
+            ]);
+        });
+}
 }
