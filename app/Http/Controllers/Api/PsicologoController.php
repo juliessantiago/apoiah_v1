@@ -13,7 +13,7 @@ class PsicologoController extends Controller
      */
     public function index()
     {
-        return response ()->json(Psicologo::all());
+        return response()->json(Psicologo::all());
     }
 
     /**

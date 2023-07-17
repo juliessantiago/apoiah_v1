@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AlunoController;
 use App\Http\Controllers\Api\OrientadorController;
 use App\Http\Controllers\Api\PsicologoController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -41,3 +42,5 @@ Route::patch('/psicologo/{id}', [PsicologoController::class, 'update']);
 Route::delete('/psicologo/{id}', [PsicologoController::class, 'remove']);
 
 Route::get('/psicologoAlunos/{id}', [PsicologoController::class, 'psicologoAlunos']);
+
+Route::apiResource('users', UserController::class);

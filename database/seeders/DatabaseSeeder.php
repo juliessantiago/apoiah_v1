@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        \App\Models\User::factory(4)->create();
         $this->call([
             OrientadorSeeder::class,
             AlunoSeeder::class, 
