@@ -20,7 +20,9 @@ class Aluno extends Model
         "turno", 
         "motivo_enc", 
         "responsavel", 
+        "orientador_id",
     ];
+    //inserir orientador_id 
     public function orientador(){
         return $this->belongsTo(Orientador::class);
       //a princípio, um aluno poderá ser cuidado por apenas um orientador
