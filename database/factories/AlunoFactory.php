@@ -19,7 +19,7 @@ class AlunoFactory extends Factory
         return [
                 'num_protoc' =>$this->faker->numerify(),
                 'nome'=> $this->faker->name(), 
-                'cpf'=>$this->faker->numerify(), //alterar depois para formato válido de cpf 
+                'cpf'=>$this->faker->cpf(),
                 'matricula'=>$this->faker->numerify(),
                 'idade'=>$this->faker->numberBetween(7,20),
                 'turma'=>'7A',
@@ -28,6 +28,8 @@ class AlunoFactory extends Factory
                 'turno'=>'tarde',
                 'motivo_enc'=>$this->faker->paragraphs()[0],
                 'responsavel'=>$this->faker->name(), 
+                'orientador_id'=>$this->faker->numberBetween(1,5)
+                //levando em consideração que incluo 5 registros de orientador no seeder 
         ];
         //alterar valores de turno para enum e vulner_social para boolean
         //tomar cuidado com o retorno do faker!

@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 use Faker\Factory as FakerFactory;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Database\Events\QueryExecuted;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +25,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        DB::listen(function (QueryExecuted $query) {
+            $dumpQuery = [
+                'SQL'   =>  $query->sql,
+                'BINDINGS'  =>  $query->bindings,
+                'TIME(ms)'  =>  $query->time,
+            ];
+            Log::channel('query')->info(print_r($dumpQuery,true));
+            // Log::debug(print_r($dumpQuery,true));
+        });
     }
 }
