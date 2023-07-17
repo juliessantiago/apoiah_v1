@@ -23,7 +23,7 @@ class Aluno extends Model
         "orientador_id",
     ];
     //inserir orientador_id 
-    public function orientador(){
+    public function orientadores(){
         return $this->belongsTo(Orientador::class);
       //a princípio, um aluno poderá ser cuidado por apenas um orientador
       //o orientador terá cadastro único dentro da escola (apenas um registro)

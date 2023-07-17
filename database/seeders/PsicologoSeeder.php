@@ -16,12 +16,11 @@ class PsicologoSeeder extends Seeder
     {
         Psicologo::factory(5)->create();
 
-        // $psicologos = Aluno::all();
-   
-        // Aluno::all()->each(function ($aluno) use ($psicologos) { 
-        //     $aluno->psicologos()->attach(
-        //         $psicologos->random(rand(1, 5))->pluck('id')->toArray(),
-        //     ); 
-        // });
+        $alunos = Aluno::all();
+        $psicologos = Psicologo::all();
+        foreach($alunos as $aluno){
+            $psicologos->first();
+            $aluno->orientadores()->attach($psicologos->id);
+        }
     }
 }
