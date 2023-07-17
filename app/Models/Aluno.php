@@ -21,4 +21,9 @@ class Aluno extends Model
         "motivo_enc", 
         "responsavel", 
     ];
+    public function orientador(){
+        return $this->belongsTo(Orientador::class);
+      //a princípio, um aluno poderá ser cuidado por apenas um orientador
+      //o orientador terá cadastro único dentro da escola (apenas um registro)
+    }
 }

@@ -25,7 +25,9 @@ return new class extends Migration
             $table->enum('turno', ['manha', 'tarde', 'noite']);
             $table->text('motivo_enc');
             $table->text('responsavel');
-           
+            $table->foreignId('orientador_id')
+            ->references('id')->on('orientadors')
+            ->cascadeOnDelete();
         });
     }
 

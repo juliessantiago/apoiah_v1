@@ -17,4 +17,8 @@ class Orientador extends Model
         "cpf"
     ];
 
+    public function alunos(){
+        return $this->hasMany(Aluno::class);
+        //Um orientador pode cuidar de vários alunos ao mesmo tempo
+    }
 }
