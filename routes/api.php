@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AlunoController;
+use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\OrientadorController;
 use App\Http\Controllers\Api\PsicologoController;
 use App\Http\Controllers\Api\UserController;
@@ -44,3 +45,5 @@ Route::delete('/psicologo/{id}', [PsicologoController::class, 'remove']);
 Route::get('/psicologoAlunos/{id}', [PsicologoController::class, 'psicologoAlunos']);
 
 Route::apiResource('users', UserController::class);
+
+Route::post('/login', [LoginController::class, 'login'])->name('login');
