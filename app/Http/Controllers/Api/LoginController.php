@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
-    public function login(Request $request){
+    public function login(Request $request){ //é possível usar um form request para o login, especificamente
         try{
             $request->validate([
                 'email' => 'required | email | exists:users', 
