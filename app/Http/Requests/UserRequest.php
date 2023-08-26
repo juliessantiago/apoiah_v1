@@ -37,6 +37,6 @@ class UserRequest extends FormRequest
             'email.unique' =>'Endereço de e-mail já está cadastrado', 
             'password.required' => 'Campo senha é obrigatório', 
             'password.min' => 'Campo senha deve ter no mínimo 6 caracteres'
-        ]
+        ];
     }
 }
